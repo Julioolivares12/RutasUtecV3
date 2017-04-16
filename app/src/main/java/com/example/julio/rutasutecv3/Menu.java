@@ -1,18 +1,27 @@
 package com.example.julio.rutasutecv3;
 
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TabHost;
 
-public class Menu extends AppCompatActivity {
+public class Menu extends FragmentActivity {
 
+    private FragmentTabHost tabHost;
     private TabHost Tbh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Tbh= (TabHost)findViewById(R.id.tabHost);
+
+      //  tabHost=(FragmentTabHost)findViewById(R.id.tabHost);
+        /*tabHost= (FragmentTabHost) findViewById(android.R.id.tabhost);
+        tabHost.setup(this,getSupportFragmentManager(),android.R.id.content);
+        tabHost.addTab(tabHost.newTabSpec("inicio").setIndicator("inicio"),inicio.class,null);
+        tabHost.addTab(tabHost.newTabSpec("mapas").setIndicator("mapas"),mapas.class, null);*/
+       Tbh= (TabHost)findViewById(R.id.tabHost);
         Tbh.setup();
         TabHost.TabSpec tab1 = Tbh.newTabSpec("tab1");
         TabHost.TabSpec tab2= Tbh.newTabSpec("tab2");
