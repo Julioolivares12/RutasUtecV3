@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new inicio_fragment(),"inicio");
         adapter.addFragment(new mapas_fragment(),"mapas");
         adapter.addFragment(new buscar_fragment(),"buscar");
-        
+
         viewPager.setAdapter(adapter);
        //viewPager.setAdapter(Adapter);
 
