@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
                 String p= txtpass.getText().toString();
                 int usuarioEncontrado = usu.Login(u,p);
                 if(usuarioEncontrado>=0){
-                    Intent menu = new Intent(getApplicationContext(),Menu.class);
+                    Intent menu = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(menu);
                     Toast.makeText(getApplicationContext()," Bienvenido",Toast.LENGTH_SHORT).show();
                 }else

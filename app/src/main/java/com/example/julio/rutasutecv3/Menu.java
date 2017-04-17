@@ -6,21 +6,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TabHost;
 
-public class Menu extends FragmentActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+
+public class Menu extends FragmentActivity implements OnMapReadyCallback {
 
     private FragmentTabHost tabHost;
     private TabHost Tbh;
+    GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        SupportMapFragment mapFragment =(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
       //  tabHost=(FragmentTabHost)findViewById(R.id.tabHost);
         /*tabHost= (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this,getSupportFragmentManager(),android.R.id.content);
         tabHost.addTab(tabHost.newTabSpec("inicio").setIndicator("inicio"),inicio.class,null);
         tabHost.addTab(tabHost.newTabSpec("mapas").setIndicator("mapas"),mapas.class, null);*/
+
        Tbh= (TabHost)findViewById(R.id.tabHost);
         Tbh.setup();
         TabHost.TabSpec tab1 = Tbh.newTabSpec("tab1");
@@ -44,5 +55,13 @@ public class Menu extends FragmentActivity {
                 Toast.makeText(getApplicationContext(),"pesta "+tabId+"pulsada",Toast.LENGTH_SHORT).show();
             }
         });*/
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        map = googleMap;
+        LatLng santiago = new LatLng(13.6462418,-89.10387830000002);
+        map.moveCamera(CameraUpdateFactory.newLatLng(santiago));
     }
 }
