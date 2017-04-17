@@ -48,7 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.03"
-            android:text="login" />
+            android:text="login"
+            android:textColor="@color/textColorWhite"
+            android:background="@color/backgroundColorButton"/>
     </LinearLayout>
 
 </LinearLayout>

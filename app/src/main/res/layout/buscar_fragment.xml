@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:id="@+id/tvBuscar"
+        android:width="100dp"
+        android:height="100dp"
+        android:text="Buscar una Ruta"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:hint="busca una ruto en especifico"
+        android:layout_weight="0.10" />
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtbuscar"
-        android:text="tab de buscar"/>
+        android:id="@+id/btnBuscar"
+        android:text="Buscar"
+        android:background="@color/backgroundColorButton"
+        android:textColor="@color/textColorWhite"/>
+
 </LinearLayout>
