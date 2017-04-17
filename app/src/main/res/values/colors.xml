@@ -3,7 +3,7 @@
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#009688</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="Blanco"></color>
+   
     <color name="backgroundColorButton">#0288D1</color>
     <color name="textColorWhite">#FFFFFF</color>
 </resources>

@@ -21,7 +21,7 @@ public class inicio_fragment extends Fragment {
     private static final String TAG = "inicio_fragment";
 
     private ListView listInicio;
-    private TextView txtinicio;
+
 
     private String[] Rutas={"Ruta 7","Ruta 11","Ruta 29","Ruta 3","Ruta","Ruta 101"};
     public ArrayAdapter<String>adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Rutas);
@@ -29,7 +29,7 @@ public class inicio_fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.inicio_fragment,container,false);
-        txtinicio=(TextView)view.findViewById(R.id.txtinicio);
+
         listInicio=(ListView)view.findViewById(R.id.ListInicio);
         listInicio.setAdapter(adapter);
         return view;
