@@ -38,6 +38,11 @@
             android:layout_height="wrap_content"
             android:hint="Apellido"/>
         <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtusuaio"
+            android:hint="usuario"/>
+        <EditText
             android:id="@+id/txtDireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
