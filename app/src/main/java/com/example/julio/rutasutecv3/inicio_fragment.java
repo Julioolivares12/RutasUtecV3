@@ -24,7 +24,7 @@ public class inicio_fragment extends Fragment {
 
 
     private String[] Rutas={"Ruta 7","Ruta 11","Ruta 29","Ruta 3","Ruta","Ruta 101"};
-    public ArrayAdapter<String>adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,Rutas);
+    public ArrayAdapter<String>adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, Rutas);
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
