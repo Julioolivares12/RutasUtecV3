@@ -19,16 +19,17 @@ import com.google.android.gms.maps.model.LatLng;
  * Created by julio on 4/17/17.
  */
 
-public class mapas_fragment extends Fragment implements OnMapReadyCallback {
+public class mapas_fragment extends Fragment  {
+  //  implements OnMapReadyCallback
     private static final String Tag="mapas_fragment";
-    MapView mapView;
-    private GoogleMap googleMap;
+   /* MapView mapView;
+    private GoogleMap googleMap;*/
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.mapas_fragment,container,false);
-        mapView=(MapView)view.findViewById(R.id.mapView);
+        /*mapView=(MapView)view.findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
 
         mapView.onResume();
@@ -50,11 +51,11 @@ public class mapas_fragment extends Fragment implements OnMapReadyCallback {
         return view;
     }
 
-    @Override
+   /* @Override
     public void onMapReady(GoogleMap googleMap) {
         LatLng latLng = new LatLng(13.6462418,-89.10387830000002);
         float zoom=13;
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,zoom));
 
-    }
+    }*/
 }

@@ -23,6 +23,8 @@ public class Login extends AppCompatActivity {
         txtpass = (EditText)findViewById(R.id.txtpass);
         btnLogin = (Button)findViewById(R.id.btnLogin);
 
+
+        
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
